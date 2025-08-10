@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: theme('colors.guardian.navy.200');
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: theme('colors.guardian.navy.50');
+    color: theme('colors.guardian.navy.900');
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-guardian-primary-600 hover:bg-guardian-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-guardian-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-guardian-navy-50 text-guardian-navy-700 font-medium py-2 px-4 rounded-lg border border-guardian-navy-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-guardian-primary-500 focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-guardian border border-guardian-navy-100;
+  }
+  
+  .badge-success {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-guardian-emerald-100 text-guardian-emerald-800;
+  }
+  
+  .badge-warning {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-guardian-amber-100 text-guardian-amber-800;
+  }
+  
+  .badge-danger {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800;
+  }
+  
+  .badge-info {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-guardian-primary-100 text-guardian-primary-800;
+  }
+}
